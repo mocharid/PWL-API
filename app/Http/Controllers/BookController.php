@@ -139,4 +139,14 @@ class BookController extends Controller
         );
         return redirect()->route('book')->with($notification);
     }
+    public function search(Request $request)
+    {
+    $query = $request->input('query');
+    $books = Book::when($query, function ($query) use ($request) {
+        $query->where('title', 'like', '%' . $request->input('query') . '%');
+    })->get();
+
+    return view('books.index', compact('books'));
+    }
+    
 }
