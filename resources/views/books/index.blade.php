@@ -12,9 +12,9 @@
                     <div class="flex justify-between mb-4">
                         <form action="{{ route('books.search') }}" method="GET" class="flex">
                             <input type="text" name="query" placeholder="Cari buku..." 
-                                class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 mr-2" />
+                                class="rounded-full shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 mr-2 px-4 py-2" />
                             <button type="submit" 
-                                class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">
+                                class="inline-flex items-center px-4 py-2 bg-blue-900 border border-transparent rounded-full font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-800 active:bg-blue-950 focus:outline-none focus:border-blue-950 focus:ring ring-blue-300 disabled:opacity-25 transition ease-in-out duration-150">
                                 {{ __('Cari') }}
                             </button>
                         </form>
