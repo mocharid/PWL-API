@@ -7,14 +7,15 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
+            <!-- Kontainer tabel dengan warna biru tua -->
+            <div class="bg-white-100 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-white">
                     <div class="flex justify-between mb-4">
                         <form action="{{ route('books.search') }}" method="GET" class="flex">
                             <input type="text" name="query" placeholder="Cari buku..." 
                                 class="rounded-full shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 mr-2 px-4 py-2" />
                             <button type="submit" 
-                                class="inline-flex items-center px-4 py-2 bg-blue-900 border border-transparent rounded-full font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-800 active:bg-blue-950 focus:outline-none focus:border-blue-950 focus:ring ring-blue-300 disabled:opacity-25 transition ease-in-out duration-150">
+                                class="inline-flex items-center px-4 py-2 bg-blue-800 border border-transparent rounded-full font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-700 active:bg-blue-900 focus:outline-none focus:border-blue-900 focus:ring ring-blue-300 disabled:opacity-25 transition ease-in-out duration-150">
                                 {{ __('Cari') }}
                             </button>
                         </form>
@@ -41,38 +42,39 @@
                         <table class="w-full border-separate border-spacing-0">
                             <thead>
                                 <tr>
-                                    <th scope="col" class="px-4 py-3 text-left bg-gray-100 dark:bg-gray-700 first:rounded-tl-lg last:rounded-tr-lg">
+                                    <th scope="col" class="px-4 py-3 text-left bg-blue-800 text-white first:rounded-tl-lg last:rounded-tr-lg">
                                         {{ __('No') }}
                                     </th>
-                                    <th scope="col" class="px-4 py-3 text-left bg-gray-100 dark:bg-gray-700">
+                                    <th scope="col" class="px-4 py-3 text-left bg-blue-800 text-white">
                                         {{ __('Judul') }}
                                     </th>
-                                    <th scope="col" class="px-4 py-3 text-left bg-gray-100 dark:bg-gray-700">
+                                    <th scope="col" class="px-4 py-3 text-left bg-blue-800 text-white">
                                         {{ __('Penulis') }}
                                     </th>
-                                    <th scope="col" class="px-4 py-3 text-left bg-gray-100 dark:bg-gray-700">
+                                    <th scope="col" class="px-4 py-3 text-left bg-blue-800 text-white">
                                         {{ __('Tahun') }}
                                     </th>
-                                    <th scope="col" class="px-4 py-3 text-left bg-gray-100 dark:bg-gray-700">
+                                    <th scope="col" class="px-4 py-3 text-left bg-blue-800 text-white">
                                         {{ __('Penerbit') }}
                                     </th>
-                                    <th scope="col" class="px-4 py-3 text-left bg-gray-100 dark:bg-gray-700">
+                                    <th scope="col" class="px-4 py-3 text-left bg-blue-800 text-white">
                                         {{ __('Kota') }}
                                     </th>
-                                    <th scope="col" class="px-4 py-3 text-left bg-gray-100 dark:bg-gray-700">
+                                    <th scope="col" class="px-4 py-3 text-left bg-blue-800 text-white">
                                         {{ __('Cover') }}
                                     </th>
-                                    <th scope="col" class="px-4 py-3 text-left bg-gray-100 dark:bg-gray-700">
+                                    <th scope="col" class="px-4 py-3 text-left bg-blue-800 text-white">
                                         {{ __('Rak Buku') }}
                                     </th>
-                                    <th scope="col" class="px-4 py-3 text-left bg-gray-100 dark:bg-gray-700 first:rounded-tl-lg last:rounded-tr-lg">
+                                    <th scope="col" class="px-4 py-3 text-left bg-blue-800 text-white first:rounded-tl-lg last:rounded-tr-lg">
                                         {{ __('Aksi') }}
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody class="bg-white dark:bg-gray-800">
+
+                            <tbody class="bg-white text-black">
                                 @foreach ($books as $book)
-                                    <tr class="border-b dark:border-gray-700">
+                                    <tr class="border-b border-blue-800">
                                         <td class="px-4 py-3">{{ $loop->iteration }}</td>
                                         <td class="px-4 py-3">{{ $book->title }}</td>
                                         <td class="px-4 py-3">{{ $book->author }}</td>
